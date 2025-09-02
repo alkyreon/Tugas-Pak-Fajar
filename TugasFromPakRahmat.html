@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Murid Baru ALKYREON BIMBEL</title>
+    <style>
+        :root{
+            --latarbelakang:#f7f8fa;
+            --kartu:#ffffff;
+            --text:#222;
+            --muted:#6b6f76;
+            --aksi:#1976d2;
+            --batas:#e4e7eb;
+        }
+        *{box-sizing:border-box}
+        body{
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background:var(--latarbelakang);
+            color:var(--text);
+            padding:36px 20px;
+        }
+        h1{
+            text-align:center;
+            font-size:1.25rem;
+            margin:0 0 18px;
+            font-weight:600;
+            color:var(--text);
+        }
+        fieldset{
+            max-width:720px;
+            margin:0 auto;
+            background:var(--kartu);
+            border:1px solid var(--batas);
+            padding:18px 20px;
+            border-radius:8px;
+            box-shadow:0 6px 18px rgba(30,30,30,0.04);
+        }
+        form p{
+            margin:10px 0;
+        }
+        label{
+            display:block;
+            font-size:0.95rem;
+            margin-bottom:6px;
+            color:var(--muted);
+            font-weight:600;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea,
+        input[type="file"]{
+            width:100%;
+            padding:8px 10px;
+            border:1px solid var(--batas);
+            border-radius:6px;
+            background:#fff;
+            font-size:0.95rem;
+            color:var(--text);
+        }
+        textarea{ min-height:84px; resize:vertical; }
+        input[type="radio"]{
+            margin-right:6px;
+            transform:translateY(2px);
+        }
+        button[type="submit"],
+        input[type="reset"]{
+            padding:8px 14px;
+            border-radius:6px;
+            font-weight:600;
+            border:1px solid transparent;
+            cursor:pointer;
+            font-size:0.95rem;
+        }
+        button[type="submit"]{
+            background:var(--aksi);
+            color:#fff;
+            margin-right:8px;
+        }
+        input[type="reset"]{
+            background:transparent;
+            color:var(--muted);
+            border:1px solid var(--border);
+        }
+        input:focus, textarea:focus, select:focus{
+            outline:none;
+            border-color:rgba(25,118,210,0.6);
+            box-shadow:0 0 0 3px rgba(25,118,210,0.08);
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulir Pendaftaran Murid Baru ALKYREON BIMBEL</h1>
+    <fieldset>
+        <form action="">
+        <p>
+            <label>Nama Lengkap:</label> <br>
+            <input type="text" name="nama" required>
+        </p>
+        <p>
+            <label>NISN/NIS:</label> <br>
+            <input type="number" name="NISNnis" required>
+        </p>
+        <p>
+            <label>Jenis Kelamin:</label> <br>
+            <input type="radio" name="jenis_kelamin" required>Laki-laki
+            <input type="radio" name="jenis_kelamin" required>Perempuan
+        </p>
+        <p>
+            <label>Tempat Lahir</label> <br>
+            <input type="text" name="tempat_lahir" required>
+        </p>
+        <p>
+            <label>Tanggal Lahir</label> <br>
+            <input type="date" name="tanggal_lahir" required>
+        </p>
+        <p>
+            <label>Alamat:</label> <br>
+            <textarea name="alamat"></textarea>
+        </p>
+        <p>
+            <label>Nomor Telepon</label> <br>
+            <input type="number" name="telepon" required>
+        </p>
+        <p>
+            <label>Email:</label> <br>
+            <input type="email" name="email" required>
+        </p>
+        <p>
+            <label>Jurusan yang dipilih:</label> <br>
+            <select name="jurusan">
+                <option value="">--Pilih Jurusan--</option>
+                <option value="rpl">RPL</option>
+                <option value="tkj">TKJ</option>
+                <option value="dpib">DPIB</option>
+                <option value="tbsm">TBSM</option>
+                <option value="tei">TEI</option>
+                <option value="titl">TITL</option>
+                <option value="mesin">Mesin</option>
+                <option value="tkr">TKR</option>
+                <option value="tav">TAV</option>
+                <option value="tkp">TKP</option>
+                <option value="kelaskhususyamaha">Kelas Khusus Yamaha</option>
+                <option value="las">Las</option>
+            </select>
+        </p>
+        <p>
+            <label>Upload Foto</label> <br>
+            <input type="file" name="foto" required>
+        </p>
+        <p>
+            <button type="submit">Kirim</button>
+            <input type="reset" value="Reset">
+        </p>
+        </form>
+    </fieldset>
+</body>
+</html>
